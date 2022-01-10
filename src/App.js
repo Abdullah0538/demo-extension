@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./App.css";
+import NavHeader from "./components/NavHeader/NavHeader";
+import SearchBar from "./components/SearchBar/SearchBar";
+import Section from "./components/Section/Section";
+import RecentExperiences from "./components/RecentExperiences/RecentExperiences";
+
+import PopularCategories from "./components/PopularCategories/PopularCategories";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavHeader />
+      <SearchBar />
+      <Section title={"Recent Experiences"}>
+        <RecentExperiences />
+      </Section>
+      <Section title={"Popular Categories"} seeAll={true}>
+          <PopularCategories />
+      </Section>
+    </>
   );
 }
 
 export default App;
+
